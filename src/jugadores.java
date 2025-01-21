@@ -14,6 +14,6 @@ public class jugadores {
 
     public enum traspaso {
         sinSolicitar, solicitado, aprobadoPorEntrenador, aprobadoPorPresidente, rechazadoPorEntrenador,
-        rechazadoPorPresiden
+        rechazadoPorPresidente
     }
 }
