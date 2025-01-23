@@ -6,8 +6,5 @@ public class Presidente {
 public Presidente(String dni, String nombrePresidente){
     this.dni = dni;
     this.nombrePresidente = nombrePresidente;
-
-
-}
-    
+}    
 }
