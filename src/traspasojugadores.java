@@ -1,5 +1,4 @@
-
-public enum traspasojugadores {
-    sinSolicitar, solicitado, aprobadoPorEntrenador, aprobadoPorPresidente, rechazadoPorEntrenador,
+public enum TraspasoJugadores {
+    sinSolicicitar, aprobadoPorEntrenador, aprobadoPorPresidente, rechazadoPorEntrenador,
     rechazadoPorPresidente
 }

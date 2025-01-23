@@ -3,7 +3,4 @@ public enum Posiciones {
     }
 
     
-    public int dorsal;
-    public 
-    
-}
+   
