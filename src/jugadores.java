@@ -9,14 +9,22 @@ public class Jugadores {
     public int dorsal;
     public TraspasoJugadores traspaso;
 
-    public Jugadores(String nombre, Date nacimiento, String nacionalidad, TraspasoJugadores traspaso,
-            Posiciones posicion, int dorsal) {
+    public Jugadores (String nombre, Date nacimiento, String nacionalidad, Posiciones posicion, int dorsal, TraspasoJugadores traspaso){
         this.nombre = nombre;
         this.nacimiento = nacimiento;
         this.nacionalidad = nacionalidad;
-        this.traspaso = traspaso;
         this.posicion = posicion;
         this.dorsal = dorsal;
 
+        if (dorsal < 1 || dorsal >99){
+            System.out.println("El dorsal no es válido");
+            return;
+        }
+        this.traspaso = traspaso;
+
+    
+        }
+
     }
-}
+    
+
