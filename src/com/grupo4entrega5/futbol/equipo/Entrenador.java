@@ -1,3 +1,6 @@
+package com.grupo4entrega5.futbol.equipo;
+import com.grupo4entrega5.futbol.alineacion.Alineacion;
+
 public class Entrenador {
     public String nombre;
     public Alineacion al_fav;
