@@ -26,11 +26,11 @@ public class Jugadores {
     }
 
     public void setDorsal(int dorsal) {
-        if (dorsal > 0) { 
+        if (dorsal > 0) {
             this.dorsal = dorsal;
         } else {
             System.out.println("El dorsal debe ser positivo.");
         }
 
-}
+    }
 }
