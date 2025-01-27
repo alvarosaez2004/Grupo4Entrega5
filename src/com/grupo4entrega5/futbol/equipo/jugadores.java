@@ -21,13 +21,16 @@ public class Jugadores {
         this.nacionalidad = nacionalidad;
         this.posicion = posicion;
         this.dorsal = dorsal;
-
-        if (dorsal < 1 || dorsal > 99) {
-            System.out.println("El dorsal no es válido");
-            return;
-        }
         this.traspaso = traspaso;
 
     }
 
+    public void setDorsal(int dorsal) {
+        if (dorsal > 0) { 
+            this.dorsal = dorsal;
+        } else {
+            System.out.println("El dorsal debe ser positivo.");
+        }
+
+}
 }
