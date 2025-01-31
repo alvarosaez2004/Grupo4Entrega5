@@ -83,7 +83,6 @@ public class Main {
                 System.out.println(jugador18);
                 System.out.println(jugador19);
                 System.out.println(jugador20);
-                Equipo equipo1 = new Equipo("Madrid", "R.M.A");
                 Presidente presidente1 = new Presidente("20890547S", "Florentino Perez");
                 Presidente presidente2 = new Presidente("20990547S", "Angel Haro");
                 Presidente presidente3 = new Presidente("20790547S", "Enrique Zerezo");
