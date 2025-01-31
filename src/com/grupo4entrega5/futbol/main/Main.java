@@ -22,6 +22,7 @@ public class Main {
         }
 
         public static void main(String[] args) throws Exception {
+            
                 Jugadores jugador1 = new Jugadores("Vinicius", crearFecha(2000, 7, 12), "Brasil",
                                 TraspasoJugadores.sinSolicicitar, Posiciones.Delantero, 11);
                 Jugadores jugador2 = new Jugadores("Maradona", crearFecha(2007, 1, 22), "Argentino",
@@ -83,7 +84,7 @@ public class Main {
                 System.out.println(jugador18);
                 System.out.println(jugador19);
                 System.out.println(jugador20);
-                Equipo equipo1 = new Equipo("Madrid", "R.M.A");
+        
                 Presidente presidente1 = new Presidente("20890547S", "Florentino Perez");
                 Presidente presidente2 = new Presidente("20990547S", "Angel Haro");
                 Presidente presidente3 = new Presidente("20790547S", "Enrique Zerezo");
