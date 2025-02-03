@@ -22,68 +22,7 @@ public class Main {
         }
 
         public static void main(String[] args) throws Exception {
-                Jugadores jugador1 = new Jugadores("Vinicius", crearFecha(2000, 7, 12), "Brasil",
-                                TraspasoJugadores.sinSolicicitar, Posiciones.Delantero, 11);
-                Jugadores jugador2 = new Jugadores("Maradona", crearFecha(2007, 1, 22), "Argentino",
-                                TraspasoJugadores.sinSolicicitar, Posiciones.Delantero, 10);
-                Jugadores jugador3 = new Jugadores("Isco", crearFecha(2002, 2, 11), "Español",
-                                TraspasoJugadores.sinSolicicitar, Posiciones.CentroCampista, 22);
-                Jugadores jugador4 = new Jugadores("Bicho", crearFecha(1999, 7, 4), "Portugal",
-                                TraspasoJugadores.sinSolicicitar, Posiciones.Delantero, 7);
-                Jugadores jugador5 = new Jugadores("La Pulga", crearFecha(1998, 3, 12), "Argentino",
-                                TraspasoJugadores.sinSolicicitar, Posiciones.Delantero, 10);
-                Jugadores jugador6 = new Jugadores("Pepe", crearFecha(1979, 2, 29), "Portugal",
-                                TraspasoJugadores.sinSolicicitar, Posiciones.Defensa, 3);
-                Jugadores jugador7 = new Jugadores("Iker Casillas", crearFecha(1989, 8, 1), "España",
-                                TraspasoJugadores.sinSolicicitar, Posiciones.Portero, 1);
-                Jugadores jugador8 = new Jugadores("Dani Alves", crearFecha(1996, 12, 31), "Brasil",
-                                TraspasoJugadores.sinSolicicitar, Posiciones.Defensa, 2);
-                Jugadores jugador9 = new Jugadores("Marcelo", crearFecha(1996, 11, 4), "Brasil",
-                                TraspasoJugadores.sinSolicicitar, Posiciones.Defensa, 12);
-                Jugadores jugador10 = new Jugadores("Zidane", crearFecha(2001, 1, 30), "Francia",
-                                TraspasoJugadores.sinSolicicitar, Posiciones.CentroCampista, 5);
-                Jugadores jugador11 = new Jugadores("Modric", crearFecha(1985, 9, 9), "Croacia",
-                                TraspasoJugadores.sinSolicicitar, Posiciones.CentroCampista, 10);
-                Jugadores jugador12 = new Jugadores("Sergio Ramos", crearFecha(1986, 3, 30), "España",
-                                TraspasoJugadores.sinSolicicitar, Posiciones.Defensa, 4);
-                Jugadores jugador13 = new Jugadores("Xavi", crearFecha(1980, 1, 25), "España",
-                                TraspasoJugadores.sinSolicicitar, Posiciones.CentroCampista, 6);
-                Jugadores jugador14 = new Jugadores("Iniesta", crearFecha(1984, 5, 11), "España",
-                                TraspasoJugadores.sinSolicicitar, Posiciones.CentroCampista, 8);
-                Jugadores jugador15 = new Jugadores("Haaland", crearFecha(2000, 7, 21), "Noruega",
-                                TraspasoJugadores.sinSolicicitar, Posiciones.Delantero, 9);
-                Jugadores jugador16 = new Jugadores("Mbappé", crearFecha(1998, 12, 20), "Francia",
-                                TraspasoJugadores.sinSolicicitar, Posiciones.Delantero, 7);
-                Jugadores jugador17 = new Jugadores("Lewandowski", crearFecha(1988, 8, 21), "Polonia",
-                                TraspasoJugadores.sinSolicicitar, Posiciones.Delantero, 9);
-                Jugadores jugador18 = new Jugadores("Kroos", crearFecha(1990, 1, 4), "Alemania",
-                                TraspasoJugadores.sinSolicicitar, Posiciones.CentroCampista, 8);
-                Jugadores jugador19 = new Jugadores("Casemiro", crearFecha(1992, 2, 23), "Brasil",
-                                TraspasoJugadores.sinSolicicitar, Posiciones.CentroCampista, 14);
-                Jugadores jugador20 = new Jugadores("Oblak", crearFecha(1993, 1, 7), "Eslovenia",
-                                TraspasoJugadores.sinSolicicitar, Posiciones.Portero, 1);
 
-                System.out.println(jugador1);
-                System.out.println(jugador2);
-                System.out.println(jugador3);
-                System.out.println(jugador4);
-                System.out.println(jugador5);
-                System.out.println(jugador6);
-                System.out.println(jugador7);
-                System.out.println(jugador8);
-                System.out.println(jugador9);
-                System.out.println(jugador10);
-                System.out.println(jugador11);
-                System.out.println(jugador12);
-                System.out.println(jugador13);
-                System.out.println(jugador14);
-                System.out.println(jugador15);
-                System.out.println(jugador16);
-                System.out.println(jugador17);
-                System.out.println(jugador18);
-                System.out.println(jugador19);
-                System.out.println(jugador20);
-                Equipo equipo1 = new Equipo("Madrid", "R.M.A");
                 Presidente presidente1 = new Presidente("20890547S", "Florentino Perez");
                 Presidente presidente2 = new Presidente("20990547S", "Angel Haro");
                 Presidente presidente3 = new Presidente("20790547S", "Enrique Zerezo");
@@ -118,6 +57,85 @@ public class Main {
                 System.out.println(equipo3);
                 System.out.println(equipo4);
                 System.out.println(equipo5);
+                Jugadores jugador1 = new Jugadores("Vinicius", crearFecha(2000, 7, 12), "Brasil",
+                                TraspasoJugadores.sinSolicicitar, Posiciones.Delantero, 11, equipo3);
 
+                Jugadores jugador2 = new Jugadores("Maradona", crearFecha(2007, 1, 22), "Argentino",
+                                TraspasoJugadores.sinSolicicitar, Posiciones.Delantero, 10, equipo4);
+
+                Jugadores jugador3 = new Jugadores("Isco", crearFecha(2002, 2, 11), "Español",
+                                TraspasoJugadores.sinSolicicitar, Posiciones.CentroCampista, 22, equipo1);
+
+                Jugadores jugador4 = new Jugadores("Bicho", crearFecha(1999, 7, 4), "Portugal",
+                                TraspasoJugadores.sinSolicicitar, Posiciones.Delantero, 7, equipo1);
+
+                Jugadores jugador5 = new Jugadores("La Pulga", crearFecha(1998, 3, 12), "Argentino",
+                                TraspasoJugadores.sinSolicicitar, Posiciones.Delantero, 10, equipo2);
+
+                Jugadores jugador6 = new Jugadores("Pepe", crearFecha(1979, 2, 29), "Portugal",
+                                TraspasoJugadores.sinSolicicitar, Posiciones.Defensa, 3, equipo3);
+
+                Jugadores jugador7 = new Jugadores("Iker Casillas", crearFecha(1989, 8, 1), "España",
+                                TraspasoJugadores.sinSolicicitar, Posiciones.Portero, 1, equipo1);
+
+                Jugadores jugador8 = new Jugadores("Dani Alves", crearFecha(1996, 12, 31), "Brasil",
+                                TraspasoJugadores.sinSolicicitar, Posiciones.Defensa, 2, equipo2);
+
+                Jugadores jugador9 = new Jugadores("Marcelo", crearFecha(1996, 11, 4), "Brasil",
+                                TraspasoJugadores.sinSolicicitar, Posiciones.Defensa, 12, equipo1);
+
+                Jugadores jugador10 = new Jugadores("Zidane", crearFecha(2001, 1, 30), "Francia",
+                                TraspasoJugadores.sinSolicicitar, Posiciones.CentroCampista, 5, equipo2);
+
+                Jugadores jugador11 = new Jugadores("Modric", crearFecha(1985, 9, 9), "Croacia",
+                                TraspasoJugadores.sinSolicicitar, Posiciones.CentroCampista, 10, equipo3);
+
+                Jugadores jugador12 = new Jugadores("Sergio Ramos", crearFecha(1986, 3, 30), "España",
+                                TraspasoJugadores.sinSolicicitar, Posiciones.Defensa, 4, equipo4);
+
+                Jugadores jugador13 = new Jugadores("Xavi", crearFecha(1980, 1, 25), "España",
+                                TraspasoJugadores.sinSolicicitar, Posiciones.CentroCampista, 6, equipo4);
+
+                Jugadores jugador14 = new Jugadores("Iniesta", crearFecha(1984, 5, 11), "España",
+                                TraspasoJugadores.sinSolicicitar, Posiciones.CentroCampista, 8, equipo5);
+
+                Jugadores jugador15 = new Jugadores("Pepe Reina", crearFecha(2000, 7, 21), "Noruega",
+                                TraspasoJugadores.sinSolicicitar, Posiciones.Portero, 9, equipo3);
+
+                Jugadores jugador16 = new Jugadores("Courtois", crearFecha(1998, 12, 20), "Belgica",
+                                TraspasoJugadores.sinSolicicitar, Posiciones.Portero, 7, equipo2);
+
+                Jugadores jugador17 = new Jugadores("Iñaki Peña", crearFecha(1988, 8, 21), "Españpl",
+                                TraspasoJugadores.sinSolicicitar, Posiciones.Portero, 9, equipo4);
+
+                Jugadores jugador18 = new Jugadores("Halland", crearFecha(1990, 1, 4), "Polonia",
+                                TraspasoJugadores.sinSolicicitar, Posiciones.Delantero, 8, equipo5);
+
+                Jugadores jugador19 = new Jugadores("Diego Lopez", crearFecha(1992, 2, 23), "Español",
+                                TraspasoJugadores.sinSolicicitar, Posiciones.Portero, 14, equipo5);
+
+                Jugadores jugador20 = new Jugadores("Sergio Ramos", crearFecha(1993, 1, 7), "Eslovenia",
+                                TraspasoJugadores.sinSolicicitar, Posiciones.Defensa, 93, equipo5);
+
+                System.out.println(jugador1);
+                System.out.println(jugador2);
+                System.out.println(jugador3);
+                System.out.println(jugador4);
+                System.out.println(jugador5);
+                System.out.println(jugador6);
+                System.out.println(jugador7);
+                System.out.println(jugador8);
+                System.out.println(jugador9);
+                System.out.println(jugador10);
+                System.out.println(jugador11);
+                System.out.println(jugador12);
+                System.out.println(jugador13);
+                System.out.println(jugador14);
+                System.out.println(jugador15);
+                System.out.println(jugador16);
+                System.out.println(jugador17);
+                System.out.println(jugador18);
+                System.out.println(jugador19);
+                System.out.println(jugador20);
         }
 }
