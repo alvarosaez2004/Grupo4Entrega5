@@ -14,14 +14,17 @@ public class Jugadores {
     private int dorsal;
     private TraspasoJugadores traspaso;
 
+    private Equipo equipo;
+
     public Jugadores(String nombre, Date nacimiento, String nacionalidad, TraspasoJugadores traspaso,
-            Posiciones posicion, int dorsal) {
+            Posiciones posicion, int dorsal, Equipo equipo) {
         this.nombre = nombre;
         this.nacimiento = nacimiento;
         this.nacionalidad = nacionalidad;
         this.posicion = posicion;
         this.dorsal = dorsal;
         this.traspaso = traspaso;
+        this.equipo = equipo;
 
     }
 
@@ -78,4 +81,11 @@ public class Jugadores {
         this.traspaso = traspaso;
     }
 
+    public Equipo getEquipo() {
+        return equipo;
+    }
+
+    public void setEquipo(Equipo equipo) {
+        this.equipo = equipo;
+    }
 }
