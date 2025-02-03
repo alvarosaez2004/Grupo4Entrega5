@@ -14,22 +14,25 @@ public class Jugadores {
     private int dorsal;
     private TraspasoJugadores traspaso;
 
-    public Jugadores(String Nombre, Date Nacimiento, String Nacionalidad, TraspasoJugadores Traspaso,
-            Posiciones Posicion, int Dorsal) {
-        this.nombre = Nombre;
-        this.nacimiento = Nacimiento;
-        this.nacionalidad = Nacionalidad;
-        this.posicion = Posicion;
-        this.dorsal = Dorsal;
-        this.traspaso = Traspaso;
+    private Equipo equipo;
+
+    public Jugadores(String nombre, Date nacimiento, String nacionalidad, TraspasoJugadores traspaso,
+            Posiciones posicion, int dorsal, Equipo equipo) {
+        this.nombre = nombre;
+        this.nacimiento = nacimiento;
+        this.nacionalidad = nacionalidad;
+        this.posicion = posicion;
+        this.dorsal = dorsal;
+        this.traspaso = traspaso;
+        this.equipo = equipo;
 
     }
 
-    public void setDorsal(int Dorsal) {
-        if (Dorsal > 0) {
-            this.dorsal = Dorsal;
+    public void setdorsal(int dorsal) {
+        if (dorsal > 0) {
+            this.dorsal = dorsal;
         } else {
-            System.out.println("El Dorsal debe ser positivo.");
+            System.out.println("El dorsal debe ser positivo.");
         }
 
     }
@@ -78,4 +81,11 @@ public class Jugadores {
         this.traspaso = traspaso;
     }
 
+    public Equipo getEquipo() {
+        return equipo;
+    }
+
+    public void setEquipo(Equipo equipo) {
+        this.equipo = equipo;
+    }
 }
