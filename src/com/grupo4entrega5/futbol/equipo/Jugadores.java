@@ -16,18 +16,18 @@ public class Jugadores {
 
     public Jugadores(String Nombre, Date Nacimiento, String Nacionalidad, TraspasoJugadores Traspaso,
             Posiciones Posicion, int Dorsal) {
-        this.Nombre = Nombre;
-        this.Nacimiento = Nacimiento;
-        this.Nacionalidad = Nacionalidad;
-        this.Posicion = Posicion;
-        this.Dorsal = Dorsal;
-        this.Traspaso = Traspaso;
+        this.nombre = Nombre;
+        this.nacimiento = Nacimiento;
+        this.nacionalidad = Nacionalidad;
+        this.posicion = Posicion;
+        this.dorsal = Dorsal;
+        this.traspaso = Traspaso;
 
     }
 
     public void setDorsal(int Dorsal) {
         if (Dorsal > 0) {
-            this.Dorsal = Dorsal;
+            this.dorsal = Dorsal;
         } else {
             System.out.println("El Dorsal debe ser positivo.");
         }
@@ -35,47 +35,47 @@ public class Jugadores {
     }
 
     public String getNombre() {
-        return Nombre;
+        return nombre;
     }
 
     public void setNombre(String nombre) {
-        Nombre = nombre;
+        this.nombre = nombre;
     }
 
     public Date getNacimiento() {
-        return Nacimiento;
+        return nacimiento;
     }
 
     public void setNacimiento(Date nacimiento) {
-        Nacimiento = nacimiento;
+        this.nacimiento = nacimiento;
     }
 
     public String getNacionalidad() {
-        return Nacionalidad;
+        return nacionalidad;
     }
 
     public void setNacionalidad(String nacionalidad) {
-        Nacionalidad = nacionalidad;
+        this.nacionalidad = nacionalidad;
     }
 
     public Posiciones getPosicion() {
-        return Posicion;
+        return posicion;
     }
 
     public void setPosicion(Posiciones posicion) {
-        Posicion = posicion;
+        this.posicion = posicion;
     }
 
     public int getDorsal() {
-        return Dorsal;
+        return dorsal;
     }
 
     public TraspasoJugadores getTraspaso() {
-        return Traspaso;
+        return traspaso;
     }
 
     public void setTraspaso(TraspasoJugadores traspaso) {
-        Traspaso = traspaso;
+        this.traspaso = traspaso;
     }
 
 }
