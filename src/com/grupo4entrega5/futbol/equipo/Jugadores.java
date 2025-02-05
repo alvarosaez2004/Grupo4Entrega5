@@ -28,6 +28,9 @@ public class Jugadores {
 
     }
 
+   
+    
+
     public void setdorsal(int dorsal) {
         if (dorsal > 0) {
             this.dorsal = dorsal;
@@ -87,5 +90,11 @@ public class Jugadores {
 
     public void setEquipo(Equipo equipo) {
         this.equipo = equipo;
+    }
+
+    public String toString() {
+        return "Jugadores [nombre = " + nombre + ", nacimiento = " + nacimiento + ", nacionalidad = " + nacionalidad
+                + ", posicion = " + posicion + ", dorsal = " + dorsal + ", traspaso = " + traspaso + ", equipo = " + equipo.getNombreEquipo()
+                + "]";
     }
 }

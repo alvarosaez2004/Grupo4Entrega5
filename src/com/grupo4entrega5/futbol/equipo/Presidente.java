@@ -11,7 +11,8 @@ public class Presidente {
         this.nombrePresidente = nombrePresidente;
         this.equipo = equipo;
     }
-    
+   
+
     public Equipo getEquipo() {
         return equipo;
     }
@@ -34,5 +35,9 @@ public class Presidente {
 
     public void setNombrePresidente(String nombrePresidente) {
         this.nombrePresidente = nombrePresidente;
+    } 
+
+    public String toString() {
+        return "Presidente [dni = " + dni + ", nombrePresidente = " + nombrePresidente + ", equipo = " + equipo.getNombreEquipo() + "]";
     }
 }

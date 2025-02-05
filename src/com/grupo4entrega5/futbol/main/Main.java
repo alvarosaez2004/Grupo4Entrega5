@@ -1,5 +1,6 @@
 package com.grupo4entrega5.futbol.main;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -11,7 +12,11 @@ import com.grupo4entrega5.futbol.equipo.Equipo;
 import com.grupo4entrega5.futbol.equipo.Jugadores;
 import com.grupo4entrega5.futbol.equipo.Presidente;
 
+
+
 public class Main {
+
+        
 
         public static Date crearFecha(int year, int month, int day) {
                 Calendar cal = Calendar.getInstance();
@@ -29,14 +34,6 @@ public class Main {
                 Presidente presidente3 = new Presidente("20790547S", "Enrique Cerezo", null);
                 Presidente presidente2 = new Presidente("20990547S", "Angel Haro", null);
                 Presidente presidente5 = new Presidente("20490547S", "Fernando Roig", null);
-
-                System.out.println(presidente1);
-                System.out.println(presidente2);
-                System.out.println(presidente3);
-                System.out.println(presidente4);
-                System.out.println(presidente5); 
-
-        
                 
         //CREAMOS LOS ENTRENADORES//
                 Entrenador entrenador1 = new Entrenador("Carlo Ancelotti", Alineacion._433, null);
@@ -45,11 +42,6 @@ public class Main {
                 Entrenador entrenador4 = new Entrenador("Manuel Pellegrini", Alineacion._541, null);
                 Entrenador entrenador5 = new Entrenador("Marcelino", Alineacion._4132, null);
                 
-                System.out.println(entrenador1);
-                System.out.println(entrenador2);
-                System.out.println(entrenador3);
-                System.out.println(entrenador4);
-                System.out.println(entrenador5);
                 
         //CREAMOS LOS EQUIPOS//
                 Equipo equipo1 = new Equipo("Real Madrid", "RMA", entrenador1, presidente1);
@@ -58,13 +50,7 @@ public class Main {
                 Equipo equipo4 = new Equipo("Real Betis Balompié", "BET", entrenador4, presidente4);
                 Equipo equipo5 = new Equipo("Villarreal CF", "VIL", entrenador5, presidente5);
                 
-                System.out.println(equipo1);
-                System.out.println(equipo2);
-                System.out.println(equipo3);
-                System.out.println(equipo4);
-                System.out.println(equipo5);
-
-
+        
                 presidente1.setEquipo(equipo1);
                 presidente2.setEquipo(equipo2);
                 presidente3.setEquipo(equipo3);
@@ -140,6 +126,64 @@ public class Main {
 
                 Jugadores jugador20 = new Jugadores("Sergio Ramos", crearFecha(1993, 1, 7), "Eslovenia",
                                 TraspasoJugadores.sinSolicicitar, Posiciones.Defensa, 93, equipo5);
+                
+                
+                ArrayList <Jugadores> lista = new ArrayList<>();
+                lista.add(jugador3);
+                lista.add(jugador4);
+                lista.add(jugador7);
+                lista.add(jugador9);
+                equipo1.setJugadores(lista);
+
+                ArrayList <Jugadores> lista2 = new ArrayList<>();
+                lista2.add(jugador5);
+                lista2.add(jugador8);
+                lista2.add(jugador10);
+                lista2.add(jugador16);
+                equipo2.setJugadores(lista2);
+
+                ArrayList <Jugadores> lista3 = new ArrayList<>();
+                lista3.add(jugador1);
+                lista3.add(jugador6);
+                lista3.add(jugador11);
+                lista3.add(jugador15);
+                equipo3.setJugadores(lista3);
+
+                ArrayList <Jugadores> lista4 = new ArrayList<>();
+                lista4.add(jugador2);
+                lista4.add(jugador12);
+                lista4.add(jugador13);
+                lista4.add(jugador17);
+                equipo4.setJugadores(lista4);
+
+                ArrayList <Jugadores> lista5 = new ArrayList<>();
+                lista5.add(jugador14);
+                lista5.add(jugador18);
+                lista5.add(jugador19);
+                lista5.add(jugador20);
+                equipo5.setJugadores(lista5);
+
+
+                System.out.println(equipo1);
+                System.out.println(equipo2);
+                System.out.println(equipo3);
+                System.out.println(equipo4);
+                System.out.println(equipo5);
+                System.out.println();
+
+                System.out.println(entrenador1);
+                System.out.println(entrenador2);
+                System.out.println(entrenador3);
+                System.out.println(entrenador4);
+                System.out.println(entrenador5);
+                System.out.println();
+
+                System.out.println(presidente1);
+                System.out.println(presidente2);
+                System.out.println(presidente3);
+                System.out.println(presidente4);
+                System.out.println(presidente5);
+                System.out.println();
 
                 System.out.println(jugador1);
                 System.out.println(jugador2);
@@ -161,5 +205,11 @@ public class Main {
                 System.out.println(jugador18);
                 System.out.println(jugador19);
                 System.out.println(jugador20);
+
+                
+
+                
+               
+                
         }
 }

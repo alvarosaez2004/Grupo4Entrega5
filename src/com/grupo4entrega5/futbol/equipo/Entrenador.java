@@ -17,6 +17,8 @@ public Entrenador(String Nombre, Alineacion Alineacion, Equipo equipo){
 
 }
 
+
+
     public String getNombre(){
         return Nombre;
     }
@@ -39,5 +41,9 @@ public Entrenador(String Nombre, Alineacion Alineacion, Equipo equipo){
 
     public void setEquipo(Equipo equipo) {
         this.equipo = equipo;
-    }
+    }    
+
+    public String toString() {
+        return "Entrenador [Nombre = " + Nombre + ", Al_fav = " + Al_fav + ", equipo = " + equipo.getNombreEquipo() + "]";
+}
 }
