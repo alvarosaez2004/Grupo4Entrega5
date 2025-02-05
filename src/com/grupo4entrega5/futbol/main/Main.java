@@ -27,8 +27,8 @@ public class Main {
         }
 
         public static void main(String[] args) throws Exception {
-                
-        //CREAMOS LOS PRESIDENTES//
+
+                // CREAMOS LOS PRESIDENTES//
                 Presidente presidente1 = new Presidente("20890547S", "Florentino Perez", null);
                 Presidente presidente4 = new Presidente("20690547S", "Laporta", null);
                 Presidente presidente3 = new Presidente("20790547S", "Enrique Cerezo", null);
@@ -63,9 +63,7 @@ public class Main {
                 entrenador4.setEquipo(equipo4);
                 entrenador5.setEquipo(equipo5);
 
-                
-
-        //CREAMOS LOS JUGADORES//
+                // CREAMOS LOS JUGADORES//
 
                 Jugadores jugador1 = new Jugadores("Vinicius", crearFecha(2000, 7, 12), "Brasil",
                                 TraspasoJugadores.sinSolicicitar, Posiciones.Delantero, 11, equipo3);
