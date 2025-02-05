@@ -22,8 +22,8 @@ public class Main {
         }
 
         public static void main(String[] args) throws Exception {
-                
-        //CREAMOS LOS PRESIDENTES//
+
+                // CREAMOS LOS PRESIDENTES//
                 Presidente presidente1 = new Presidente("20890547S", "Florentino Perez", null);
                 Presidente presidente4 = new Presidente("20690547S", "Laporta", null);
                 Presidente presidente3 = new Presidente("20790547S", "Enrique Cerezo", null);
@@ -34,36 +34,33 @@ public class Main {
                 System.out.println(presidente2);
                 System.out.println(presidente3);
                 System.out.println(presidente4);
-                System.out.println(presidente5); 
+                System.out.println(presidente5);
 
-        
-                
-        //CREAMOS LOS ENTRENADORES//
+                // CREAMOS LOS ENTRENADORES//
                 Entrenador entrenador1 = new Entrenador("Carlo Ancelotti", Alineacion._433, null);
                 Entrenador entrenador2 = new Entrenador("Hansi Flick", Alineacion._442, null);
                 Entrenador entrenador3 = new Entrenador("Diego Simeone", Alineacion._532, null);
                 Entrenador entrenador4 = new Entrenador("Manuel Pellegrini", Alineacion._541, null);
                 Entrenador entrenador5 = new Entrenador("Marcelino", Alineacion._4132, null);
-                
+
                 System.out.println(entrenador1);
                 System.out.println(entrenador2);
                 System.out.println(entrenador3);
                 System.out.println(entrenador4);
                 System.out.println(entrenador5);
-                
-        //CREAMOS LOS EQUIPOS//
+
+                // CREAMOS LOS EQUIPOS//
                 Equipo equipo1 = new Equipo("Real Madrid", "RMA", entrenador1, presidente1);
                 Equipo equipo2 = new Equipo("FC Barcelona", "FCB", entrenador2, presidente2);
                 Equipo equipo3 = new Equipo("Atlético de Madrid", "ATM", entrenador3, presidente3);
                 Equipo equipo4 = new Equipo("Real Betis Balompié", "BET", entrenador4, presidente4);
                 Equipo equipo5 = new Equipo("Villarreal CF", "VIL", entrenador5, presidente5);
-                
+
                 System.out.println(equipo1);
                 System.out.println(equipo2);
                 System.out.println(equipo3);
                 System.out.println(equipo4);
                 System.out.println(equipo5);
-
 
                 presidente1.setEquipo(equipo1);
                 presidente2.setEquipo(equipo2);
@@ -77,9 +74,7 @@ public class Main {
                 entrenador4.setEquipo(equipo4);
                 entrenador5.setEquipo(equipo5);
 
-                
-
-        //CREAMOS LOS JUGADORES//
+                // CREAMOS LOS JUGADORES//
 
                 Jugadores jugador1 = new Jugadores("Vinicius", crearFecha(2000, 7, 12), "Brasil",
                                 TraspasoJugadores.sinSolicicitar, Posiciones.Delantero, 11, equipo3);
