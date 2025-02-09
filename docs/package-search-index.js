@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.grupo4entrega5.futbol.alineacion"},{"l":"com.grupo4entrega5.futbol.equipo"},{"l":"com.grupo4entrega5.futbol.Fichajes"},{"l":"com.grupo4entrega5.futbol.main"}];updateSearchResults();
