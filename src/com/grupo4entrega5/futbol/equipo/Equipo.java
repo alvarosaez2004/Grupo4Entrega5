@@ -198,7 +198,9 @@ public class Equipo {
      * @param jugador El jugador que se agregará al equipo.
      */
     public void agregarJugador(Jugadores jugador) {
-        jugadores.add(jugador);
+        if (!jugadores.contains(jugador)) {
+            jugadores.add(jugador);
+        }
     }
 
     /**
