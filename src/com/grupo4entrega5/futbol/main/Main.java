@@ -15,29 +15,47 @@ import com.grupo4entrega5.futbol.equipo.Presidente;
 
 public class Main {
 
+        /**
+         * Crea una fecha en base a los parámetros ingresados.
+         * 
+         * @param year  Año de la fecha.
+         * @param month Mes de la fecha (1-12).
+         * @param day   Día de la fecha.
+         * @return Objeto Date con la fecha especificada.
+         */
         public static Date crearFecha(int year, int month, int day) {
-                Calendar cal = Calendar.getInstance();
-                cal.set(year, month, day);
-                Date date = cal.getTime();
-                return cal.getTime();
-
+            Calendar cal = Calendar.getInstance();
+            cal.set(year, month - 1, day); // Se resta 1 al mes para corregir el índice de Calendar
+            return cal.getTime();
         }
-
+    
+        /**
+         * Método principal que ejecuta el programa.
+         * 
+         * @param args Argumentos de línea de comandos.
+         * @throws Exception Si ocurre algún error inesperado.
+         */
         public static void main(String[] args) throws Exception {
-
-                // CREAMOS LOS PRESIDENTES//
-                Presidente presidente1 = new Presidente("20890547S", "Florentino Perez", null);
-                Presidente presidente4 = new Presidente("20690547S", "Laporta", null);
-                Presidente presidente3 = new Presidente("20790547S", "Enrique Cerezo", null);
-                Presidente presidente2 = new Presidente("20990547S", "Angel Haro", null);
-                Presidente presidente5 = new Presidente("20490547S", "Fernando Roig", null);
+    
 
                 // CREAMOS LOS ENTRENADORES//
-                Entrenador entrenador1 = new Entrenador("Carlo Ancelotti", Alineacion._433, null);
-                Entrenador entrenador2 = new Entrenador("Hansi Flick", Alineacion._442, null);
-                Entrenador entrenador3 = new Entrenador("Diego Simeone", Alineacion._532, null);
-                Entrenador entrenador4 = new Entrenador("Manuel Pellegrini", Alineacion._541, null);
-                Entrenador entrenador5 = new Entrenador("Marcelino", Alineacion._4132, null);
+                Entrenador entrenador1 = new Entrenador("Carlo Ancelotti", null, "Italia", Alineacion._343, null);
+                Entrenador entrenador2 = new Entrenador("Hansi Flick", null, "Alemania", Alineacion._352, null);
+                Entrenador entrenador3 = new Entrenador("Diego Simeone", null, "Argentina", Alineacion._541, null);
+                Entrenador entrenador4 = new Entrenador("Manuel Pellegrini", null, null, null, null);
+                Entrenador entrenador5 = new Entrenador("Marcelino", null, "Chueca", Alineacion._433, null);
+                Presidente presidente1 = new Presidente("20890547S", "Florentino Perez", crearFecha(1995, 9, 22),
+                                "España",
+                                null);
+                Presidente presidente4 = new Presidente("20690547S", "Laporta", crearFecha(1998, 2, 22), "España",
+                                null);
+                Presidente presidente3 = new Presidente("20790547S", "Enrique Cerezo", crearFecha(1989, 3, 23),
+                                "España",
+                                null);
+                Presidente presidente2 = new Presidente("20990547S", "Angel Haro", crearFecha(1970, 6, 3), "España",
+                                null);
+                Presidente presidente5 = new Presidente("20490547S", "Fernando Roig", crearFecha(1980, 1, 2), "España",
+                                null);
 
                 // CREAMOS LOS EQUIPOS//
                 Equipo equipo1 = new Equipo("Real Madrid", "RMA", entrenador1, presidente1);
@@ -132,15 +150,6 @@ public class Main {
                 lista2.add(jugador8);
                 lista2.add(jugador10);
                 lista2.add(jugador16);
-                equipo2.setJugadores(lista2);
-
-                ArrayList<Jugadores> lista3 = new ArrayList<>();
-                lista3.add(jugador1);
-                lista3.add(jugador6);
-                lista3.add(jugador11);
-                lista3.add(jugador15);
-                equipo3.setJugadores(lista3);
-
                 ArrayList<Jugadores> lista4 = new ArrayList<>();
                 lista4.add(jugador2);
                 lista4.add(jugador12);
@@ -180,6 +189,15 @@ public class Main {
                 System.out.println(jugador2);
                 System.out.println(jugador3);
                 System.out.println(jugador4);
+                equipo2.setJugadores(lista2);
+
+                ArrayList<Jugadores> lista3 = new ArrayList<>();
+                lista3.add(jugador1);
+                lista3.add(jugador6);
+                lista3.add(jugador11);
+                lista3.add(jugador15);
+                equipo3.setJugadores(lista3);
+
                 System.out.println(jugador5);
                 System.out.println(jugador6);
                 System.out.println(jugador7);

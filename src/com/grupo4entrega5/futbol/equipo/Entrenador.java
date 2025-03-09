@@ -1,113 +1,90 @@
 package com.grupo4entrega5.futbol.equipo;
 
+import java.util.Date;
+import com.grupo4entrega5.futbol.Personas.Trabajador;
 import com.grupo4entrega5.futbol.alineacion.Alineacion;
 
 /**
- * La clase <code>Entrenador</code> representa a un entrenador de fútbol.
- * Contiene información relevante como el nombre del entrenador, la alineación
- * favorita del entrenador, y el equipo al que dirige.
- * 
- * <p>
- * El entrenador tiene acceso a la alineación preferida y al equipo al que
- * pertenece.
- * </p>
+ * Representa a un entrenador de fútbol, que es un tipo de trabajador del equipo.
  * 
  * @author [Tu nombre]
  * @version 1.0
  */
-public class Entrenador {
-
-    /**
-     * Nombre del entrenador.
-     */
-    private String Nombre;
-
-    /**
-     * Alineación favorita del entrenador.
-     */
-    private Alineacion Al_fav;
-
-    /**
-     * Equipo al que pertenece el entrenador.
-     */
+public class Entrenador extends Trabajador {
+    /** Alineación favorita del entrenador. */
+    private Alineacion al_fav;
+    
+    /** Equipo al que pertenece el entrenador. */
     private Equipo equipo;
 
     /**
-     * Constructor de la clase <code>Entrenador</code>. Inicializa un nuevo
-     * entrenador con los detalles proporcionados.
+     * Constructor de la clase Entrenador.
      * 
-     * @param Nombre     Nombre del entrenador.
-     * @param Alineacion Alineación favorita del entrenador.
-     * @param equipo     El equipo al que pertenece el entrenador.
+     * @param nombre Nombre del entrenador.
+     * @param fechaNacimiento Fecha de nacimiento del entrenador.
+     * @param paisOrigen País de origen del entrenador.
+     * @param al_fav Alineación favorita del entrenador.
+     * @param equipo Equipo al que pertenece el entrenador.
      */
-    public Entrenador(String Nombre, Alineacion Alineacion, Equipo equipo) {
-        this.Nombre = Nombre;
-        this.Al_fav = Alineacion;
+    public Entrenador(String nombre, Date fechaNacimiento, String paisOrigen, Alineacion al_fav, Equipo equipo) {
+        super(nombre, fechaNacimiento, paisOrigen);
+        this.al_fav = al_fav;
         this.equipo = equipo;
-    }
-
-    /**
-     * Obtiene el nombre del entrenador.
-     * 
-     * @return el nombre del entrenador.
-     */
-    public String getNombre() {
-        return Nombre;
-    }
-
-    /**
-     * Establece el nombre del entrenador.
-     * 
-     * @param Nombre El nuevo nombre del entrenador.
-     */
-    public void setNombre(String Nombre) {
-        this.Nombre = Nombre;
     }
 
     /**
      * Obtiene la alineación favorita del entrenador.
      * 
-     * @return la alineación favorita del entrenador.
+     * @return Alineación favorita.
      */
     public Alineacion getAl_fav() {
-        return Al_fav;
+        return al_fav;
     }
 
     /**
      * Establece la alineación favorita del entrenador.
      * 
-     * @param Alineacion La nueva alineación favorita del entrenador.
+     * @param al_fav Nueva alineación favorita.
      */
-    public void setAl_fav(Alineacion Alineacion) {
-        this.Al_fav = Alineacion;
+    public void setAl_fav(Alineacion al_fav) {
+        this.al_fav = al_fav;
     }
 
     /**
-     * Obtiene el equipo al que pertenece el entrenador.
+     * Obtiene el equipo del entrenador.
      * 
-     * @return el equipo del entrenador.
+     * @return Equipo del entrenador.
      */
     public Equipo getEquipo() {
         return equipo;
     }
 
     /**
-     * Establece el equipo al que pertenece el entrenador.
+     * Establece el equipo del entrenador.
      * 
-     * @param equipo El nuevo equipo del entrenador.
+     * @param equipo Nuevo equipo.
      */
     public void setEquipo(Equipo equipo) {
         this.equipo = equipo;
     }
 
     /**
-     * Devuelve una representación en forma de cadena del entrenador.
+     * Muestra la información del entrenador.
+     */
+    @Override
+    public void mostrarInfo() {
+        System.out.println("Entrenador: " + nombre + ", Nacionalidad: " + paisOrigen + 
+                ", Alineación favorita: " + al_fav + ", Equipo: " + equipo.getNombreEquipo());
+    }
+
+    /**
+     * Devuelve una representación en cadena del entrenador.
      * 
-     * @return una cadena con los detalles del entrenador.
+     * @return Cadena con la información del entrenador.
      */
     @Override
     public String toString() {
-        return "Entrenador [Nombre = " + Nombre + ", Al_fav = " + Al_fav + ", equipo = " + equipo.getNombreEquipo()
-                + "]";
+        return "Entrenador [Nombre = " + nombre + ", Alineación favorita = " + al_fav + 
+                ", Equipo = " + equipo.getNombreEquipo() + "]";
     }
 }

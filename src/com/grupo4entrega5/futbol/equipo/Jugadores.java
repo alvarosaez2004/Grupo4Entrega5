@@ -1,39 +1,15 @@
 package com.grupo4entrega5.futbol.equipo;
 
 import java.util.Date;
-
 import com.grupo4entrega5.futbol.Fichajes.TraspasoJugadores;
 import com.grupo4entrega5.futbol.alineacion.Posiciones;
+import com.grupo4entrega5.futbol.Personas.Trabajador;
 
 /**
- * La clase <code>Jugadores</code> representa a un jugador de fútbol en un
- * equipo.
- * Contiene la información relevante como nombre, fecha de nacimiento,
- * nacionalidad,
- * dorsal, posición y detalles sobre su traspaso y equipo.
- * <p>
- * Esta clase también realiza el seguimiento de la cantidad de jugadores
- * creados.
- * </p>
- * 
- * @version 1.0
+ * La clase <code>Jugadores</code> representa a un jugador de fútbol en un equipo.
+ * Hereda de la clase abstracta {@link Trabajador}.
  */
-public class Jugadores {
-
-    /**
-     * Nombre del jugador.
-     */
-    private String nombre;
-
-    /**
-     * Fecha de nacimiento del jugador.
-     */
-    private Date nacimiento;
-
-    /**
-     * Nacionalidad del jugador.
-     */
-    private String nacionalidad;
+public class Jugadores extends Trabajador {
 
     /**
      * Posición en el campo del jugador.
@@ -62,41 +38,38 @@ public class Jugadores {
 
     /**
      * Constructor de la clase <code>Jugadores</code>. Inicializa un nuevo jugador
-     * con los detalles proporcionados.
+     * con los detalles proporcionados, además de los atributos heredados de la
+     * clase {@link Trabajador}.
      * 
-     * @param nombre       Nombre del jugador.
-     * @param nacimiento   Fecha de nacimiento del jugador.
-     * @param nacionalidad Nacionalidad del jugador.
-     * @param traspaso     Información sobre el traspaso del jugador.
-     * @param posicion     Posición en el campo del jugador.
-     * @param dorsal       Dorsal del jugador.
-     * @param equipo       El equipo al que pertenece el jugador.
+     * @param nombre          Nombre del jugador.
+     * @param fechaNacimiento Fecha de nacimiento del jugador.
+     * @param nacionalidad    Nacionalidad del jugador.
+     * @param traspaso        Información sobre el traspaso del jugador.
+     * @param posicion        Posición en el campo del jugador.
+     * @param dorsal          Dorsal del jugador.
+     * @param equipo          El equipo al que pertenece el jugador.
      */
-    public Jugadores(String nombre, Date nacimiento, String nacionalidad, TraspasoJugadores traspaso,
-            Posiciones posicion, int dorsal, Equipo equipo) {
-        this.nombre = nombre;
-        this.nacimiento = nacimiento;
-        this.nacionalidad = nacionalidad;
+    public Jugadores(String nombre, Date fechaNacimiento, String nacionalidad,
+            TraspasoJugadores traspaso, Posiciones posicion, int dorsal, Equipo equipo) {
+        super(nombre, fechaNacimiento, nacionalidad);
         this.posicion = posicion;
         this.traspaso = traspaso;
         this.equipo = equipo;
-        this.traspaso = TraspasoJugadores.sinSolicitar;
         this.setDorsal(dorsal);
         contadorJugadores++;
     }
 
     /**
-     * Obtiene el número de jugadores creados.
+     * Obtiene el número total de jugadores creados.
      * 
-     * @return el número de jugadores.
+     * @return Número de jugadores creados.
      */
     public static int getContadorJugadores() {
         return contadorJugadores;
     }
 
     /**
-     * Establece el dorsal del jugador. El dorsal debe ser mayor o igual a 0.
-     * Si el dorsal es negativo, no se establece.
+     * Establece el dorsal del jugador. El dorsal debe ser un número positivo.
      * 
      * @param dorsal El dorsal del jugador.
      */
@@ -109,70 +82,16 @@ public class Jugadores {
     }
 
     /**
-     * Obtiene el nombre del jugador.
+     * Obtiene la posición del jugador en el campo.
      * 
-     * @return el nombre del jugador.
-     */
-    public String getNombre() {
-        return nombre;
-    }
-
-    /**
-     * Establece el nombre del jugador.
-     * 
-     * @param nombre El nuevo nombre del jugador.
-     */
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    /**
-     * Obtiene la fecha de nacimiento del jugador.
-     * 
-     * @return la fecha de nacimiento del jugador.
-     */
-    public Date getNacimiento() {
-        return nacimiento;
-    }
-
-    /**
-     * Establece la fecha de nacimiento del jugador.
-     * 
-     * @param nacimiento La nueva fecha de nacimiento del jugador.
-     */
-    public void setNacimiento(Date nacimiento) {
-        this.nacimiento = nacimiento;
-    }
-
-    /**
-     * Obtiene la nacionalidad del jugador.
-     * 
-     * @return la nacionalidad del jugador.
-     */
-    public String getNacionalidad() {
-        return nacionalidad;
-    }
-
-    /**
-     * Establece la nacionalidad del jugador.
-     * 
-     * @param nacionalidad La nueva nacionalidad del jugador.
-     */
-    public void setNacionalidad(String nacionalidad) {
-        this.nacionalidad = nacionalidad;
-    }
-
-    /**
-     * Obtiene la posición en el campo del jugador.
-     * 
-     * @return la posición del jugador.
+     * @return La posición del jugador.
      */
     public Posiciones getPosicion() {
         return posicion;
     }
 
     /**
-     * Establece la posición en el campo del jugador.
+     * Establece la posición del jugador en el campo.
      * 
      * @param posicion La nueva posición del jugador.
      */
@@ -181,43 +100,34 @@ public class Jugadores {
     }
 
     /**
-     * Obtiene el dorsal del jugador.
+     * Obtiene la información del traspaso del jugador.
      * 
-     * @return el dorsal del jugador.
-     */
-    public int getDorsal() {
-        return dorsal;
-    }
-
-    /**
-     * Obtiene la información sobre el traspaso del jugador.
-     * 
-     * @return el traspaso del jugador.
+     * @return Datos del traspaso del jugador.
      */
     public TraspasoJugadores getTraspaso() {
         return traspaso;
     }
 
     /**
-     * Establece la información sobre el traspaso del jugador.
+     * Establece la información de traspaso del jugador.
      * 
-     * @param traspaso La nueva información del traspaso del jugador.
+     * @param traspaso Nueva información de traspaso.
      */
     public void setTraspaso(TraspasoJugadores traspaso) {
         this.traspaso = traspaso;
     }
 
     /**
-     * Obtiene el equipo al que pertenece el jugador.
+     * Obtiene el equipo del jugador.
      * 
-     * @return el equipo del jugador.
+     * @return El equipo al que pertenece el jugador.
      */
     public Equipo getEquipo() {
         return equipo;
     }
 
     /**
-     * Establece el equipo al que pertenece el jugador.
+     * Establece el equipo del jugador.
      * 
      * @param equipo El nuevo equipo del jugador.
      */
@@ -226,14 +136,24 @@ public class Jugadores {
     }
 
     /**
+     * Muestra la información detallada del jugador.
+     * Sobrescribe el método {@link Trabajador#mostrarInfo()}.
+     */
+    @Override
+    public void mostrarInfo() {
+        System.out.println("Jugador: " + getNombre() + ", Nacionalidad: " + getPaisOrigen()
+                + ", Posición: " + posicion + ", Dorsal: " + dorsal + ", Equipo: " + equipo.getNombreEquipo());
+    }
+
+    /**
      * Devuelve una representación en forma de cadena del jugador.
      * 
-     * @return una cadena con los detalles del jugador.
+     * @return Una cadena con los detalles del jugador.
      */
+    @Override
     public String toString() {
-        return "Jugadores [nombre = " + nombre + ", nacimiento = " + nacimiento + ", nacionalidad = " + nacionalidad
-                + ", posicion = " + posicion + ", dorsal = " + dorsal + ", traspaso = " + traspaso + ", equipo = "
-                + equipo.getNombreEquipo()
-                + "]";
+        return "Jugador [Nombre = " + getNombre() + ", Nacionalidad = " + getPaisOrigen() + ", Posición = "
+                + posicion + ", Dorsal = " + dorsal + ", Traspaso = " + traspaso + ", Equipo = "
+                + equipo.getNombreEquipo() + "]";
     }
 }
