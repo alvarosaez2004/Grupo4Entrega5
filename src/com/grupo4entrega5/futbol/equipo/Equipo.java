@@ -16,7 +16,7 @@ import com.grupo4entrega5.futbol.Fichajes.TraspasoJugadores;
  * cantidad de equipos creados.
  * </p>
  * 
- * @author [Tu nombre]
+ * 
  * @version 1.0
  */
 public class Equipo {
